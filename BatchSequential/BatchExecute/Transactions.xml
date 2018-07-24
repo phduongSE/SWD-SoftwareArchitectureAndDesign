@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Transactions>
+  <Transaction >
+    <UserId>U107</UserId>
+    <Amount>111</Amount>
+    <TYPE>U</TYPE>
+  </Transaction>
+  <Transaction>
+    <UserId>U106</UserId>
+    <Amount>222</Amount>
+    <TYPE>D</TYPE>
+  </Transaction>
+
+  <Transaction>
+    <UserId>U108</UserId>
+    <Amount>222</Amount>
+    <TYPE>U</TYPE>
+  </Transaction>
+  <Transaction>
+    <UserId>U106</UserId>
+    <Amount>222</Amount>
+    <TYPE>D</TYPE>
+  </Transaction>
+  <Transaction>
+    <UserId>U107</UserId>
+    <Amount>333</Amount>
+    <TYPE>U</TYPE>
+  </Transaction>
+  
+  
+  <Transaction >
+    <UserId>U105</UserId>
+    <Amount>-333</Amount>
+    <TYPE>A</TYPE>
+  </Transaction>
+  <Transaction>
+    <UserId>U104</UserId>
+    <Amount>-444</Amount>
+    <TYPE>D</TYPE>
+  </Transaction>
+</Transactions>

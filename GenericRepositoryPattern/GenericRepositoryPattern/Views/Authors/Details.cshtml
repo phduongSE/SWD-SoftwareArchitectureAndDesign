@@ -1,0 +1,65 @@
+﻿@model GenericRepositoryPattern.ViewModels.AuthorDetail
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Author</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BirthDay)
+        </dd>
+
+    </dl>
+
+</div>
+
+<hr />
+<h4>Author's Books</h4>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BookList.FirstOrDefault().Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BookList.FirstOrDefault().PublishDate)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.BookList)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PublishDate)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", "Books", new { id = item.Id }, null) |
+                @Html.ActionLink("Details", "Details", "Books", new { id = item.Id }, null) |
+                @Html.ActionLink("Delete", "Delete", "Books", new { id = item.Id }, null)
+            </td>
+        </tr>
+    }
+
+</table>
